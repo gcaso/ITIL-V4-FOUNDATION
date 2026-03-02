@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITIL v4 Foundation - Ultimate Cheat Sheet</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: #f4f4f0; 
+            color: #111827;
+        }
+        
+        /* Neo-brutalist Gumroad Style Cards */
+        .gumroad-card {
+            border: 3px solid #000;
+            box-shadow: 6px 6px 0px 0px #000;
+            border-radius: 0.75rem;
+            transition: all 0.2s ease-in-out;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .gumroad-card:hover {
+            transform: translate(2px, 2px);
+            box-shadow: 4px 4px 0px 0px #000;
+        }
+
+        .badge {
+            border: 2px solid #000;
+            box-shadow: 2px 2px 0px 0px #000;
+        }
+
+        /* Hide scrollbar for horizontal scrolling areas */
+        .hide-scroll::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scroll {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="pb-20">
+
+    <header class="bg-[#ff90e8] border-b-4 border-black p-8 md:p-16 mb-12">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+            <div>
+                <h1 class="text-5xl md:text-7xl font-bold mb-4 uppercase tracking-tight">ITIL 4 Foundation</h1>
+                <p class="text-xl md:text-2xl font-semibold border-2 border-black bg-white inline-block px-4 py-2 rounded-full shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                    Exam Survival Guide. Zero Fluff. 100% Signal.
+                </p>
+            </div>
+            <div class="bg-[#ffc900] border-3 border-black p-4 rounded-xl shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transform rotate-3">
+                <p class="font-bold text-lg text-center">Pass Mark: 65%</p>
+                <p class="text-sm text-center">(26 out of 40 questions)</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6">
+
+        <section class="mb-20">
+            <h2 class="text-4xl font-bold mb-8 uppercase flex items-center gap-4">
+                <span class="bg-black text-white w-12 h-12 flex items-center justify-center rounded-full text-2xl">1</span>
+                Key Concepts & Definitions
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <div class="gumroad-card bg-white p-6">
+                    <h3 class="text-xl font-bold mb-2 border-b-3 border-black pb-2">Value & Co-creation</h3>
+                    <p class="text-sm mb-3"><b>Value:</b> The perceived benefits, usefulness, and importance of something.</p>
+                    <p class="text-sm bg-gray-100 p-3 rounded border border-black font-medium">Value is <i>co-created</i> through an active collaboration between providers and consumers.</p>
+                </div>
+
+                <div class="gumroad-card bg-[#ffc900] p-6">
+                    <h3 class="text-xl font-bold mb-2 border-b-3 border-black pb-2">Utility vs Warranty</h3>
+                    <p class="text-sm mb-3"><b>Utility (Fit for purpose):</b> The functionality offered by a product or service to meet a particular need. (What the service does).</p>
+                    <p class="text-sm"><b>Warranty (Fit for use):</b> Assurance that a product or service will meet agreed requirements. (Availability, Capacity, Security, Continuity).</p>
+                </div>
+
+                <div class="gumroad-card bg-[#23a094] text-white p-6">
+                    <h3 class="text-xl font-bold mb-2 border-b-3 border-black pb-2">Outputs vs Outcomes</h3>
+                    <p class="text-sm mb-3"><b>Output:</b> A tangible or intangible deliverable of an activity (e.g., a wedding ring).</p>
+                    <p class="text-sm"><b>Outcome:</b> A result for a stakeholder enabled by one or more outputs (e.g., a happy marriage).</p>
+                </div>
+
+                <div class="gumroad-card bg-[#90a8ed] p-6">
+                    <h3 class="text-xl font-bold mb-2 border-b-3 border-black pb-2">Service Offerings</h3>
+                    <p class="text-sm">A description of one or more services, designed to address the needs of a target consumer group. Includes: <b>Goods</b>, <b>Access to resources</b>, and <b>Service actions</b>.</p>
+                </div>
+
+                <div class="gumroad-card bg-white p-6">
+                    <h3 class="text-xl font-bold mb-2 border-b-3 border-black pb-2">Key Roles</h3>
+                    <ul class="text-sm list-none space-y-2">
+                        <li><span class="font-bold bg-yellow-200 px-1 border border-black">Sponsor:</span> Authorizes budget for service consumption.</li>
+                        <li><span class="font-bold bg-green-200 px-1 border border-black">Customer:</span> Defines requirements for a service and takes responsibility for outcomes.</li>
+                        <li><span class="font-bold bg-blue-200 px-1 border border-black">User:</span> A person who uses services.</li>
+                    </ul>
+                </div>
+
+                <div class="gumroad-card bg-[#ff90e8] p-6">
+                    <h3 class="text-xl font-bold mb-2 border-b-3 border-black pb-2">Costs & Risks</h3>
+                    <p class="text-sm mb-2"><b>Cost:</b> The amount of money spent on a specific activity or resource.</p>
+                    <p class="text-sm"><b>Risk:</b> A possible event that could cause harm or loss. Services <i>remove</i> risks from consumers, but also <i>impose</i> new risks on them.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="mb-20">
+            <h2 class="text-4xl font-bold mb-4 uppercase flex items-center gap-4">
+                <span class="bg-black text-white w-12 h-12 flex items-center justify-center rounded-full text-2xl">2</span>
+                The 4 Dimensions (VOIP)
+            </h2>
+            <p class="mb-8 font-semibold text-lg text-gray-700 bg-white inline-block p-2 border-2 border-black rounded shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                To ensure a holistic approach, these 4 dimensions must be considered for every service.
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <div class="gumroad-card bg-white p-6">
+                    <div class="text-3xl mb-4">👥</div>
+                    <h3 class="text-xl font-bold mb-3">1. Organizations & People</h3>
+                    <p class="text-sm flex-grow">Formal organizational structures, culture, required staffing and competencies, roles, and responsibilities.</p>
+                </div>
+
+                <div class="gumroad-card bg-white p-6">
+                    <div class="text-3xl mb-4">💻</div>
+                    <h3 class="text-xl font-bold mb-3">2. Information & Technology</h3>
+                    <p class="text-sm flex-grow">The information and knowledge used to deliver services, and the technologies used to manage them (Workflow mgmt, KB, Cloud).</p>
+                </div>
+
+                <div class="gumroad-card bg-white p-6">
+                    <div class="text-3xl mb-4">🤝</div>
+                    <h3 class="text-xl font-bold mb-3">3. Partners & Suppliers</h3>
+                    <p class="text-sm flex-grow">Relationships with other organizations that are involved in the design, development, deployment, delivery, and support of services.</p>
+                </div>
+
+                <div class="gumroad-card bg-white p-6">
+                    <div class="text-3xl mb-4">⚙️</div>
+                    <h3 class="text-xl font-bold mb-3">4. Value Streams & Processes</h3>
+                    <p class="text-sm flex-grow">How the various parts of the organization work in an integrated and coordinated way to enable value creation.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="mb-20">
+            <h2 class="text-4xl font-bold mb-8 uppercase flex items-center gap-4">
+                <span class="bg-black text-white w-12 h-12 flex items-center justify-center rounded-full text-2xl">3</span>
+                The 7 Guiding Principles
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="gumroad-card bg-[#ff90e8] p-5">
+                    <h4 class="font-bold text-lg mb-2">1. Focus on value</h4>
+                    <p class="text-sm">Everything that the organization does needs to map, directly or indirectly, to value for the stakeholders (Customer Experience - CX).</p>
+                </div>
+                <div class="gumroad-card bg-[#90a8ed] p-5">
+                    <h4 class="font-bold text-lg mb-2">2. Start where you are</h4>
+                    <p class="text-sm">Do not start from scratch and build something new without considering what is already available. Assess the current state objectively.</p>
+                </div>
+                <div class="gumroad-card bg-[#ffc900] p-5">
+                    <h4 class="font-bold text-lg mb-2">3. Progress iteratively with feedback</h4>
+                    <p class="text-sm">Do not attempt to do everything at once. Organize work into smaller, manageable sections (iterations).</p>
+                </div>
+                <div class="gumroad-card bg-[#23a094] text-white p-5">
+                    <h4 class="font-bold text-lg mb-2">4. Collaborate and promote visibility</h4>
+                    <p class="text-sm">Work together across boundaries. Break down silos. Make work, consequences, and current state visible to all.</p>
+                </div>
+                <div class="gumroad-card bg-purple-300 p-5">
+                    <h4 class="font-bold text-lg mb-2">5. Think and work holistically</h4>
+                    <p class="text-sm">No service stands alone. Establish an understanding of how all the parts of an organization work together (Use the 4 Dimensions).</p>
+                </div>
+                <div class="gumroad-card bg-red-300 p-5">
+                    <h4 class="font-bold text-lg mb-2">6. Keep it simple and practical</h4>
+                    <p class="text-sm">If a process, service, action, or metric provides no value, eliminate it. Use the minimum number of steps necessary.</p>
+                </div>
+                <div class="gumroad-card bg-orange-300 p-5 md:col-span-2 lg:col-span-2">
+                    <h4 class="font-bold text-lg mb-2">7. Optimize and automate</h4>
+                    <p class="text-sm">Resources of all types should be used to their best effect. <b>Rule:</b> Optimize a process <i>before</i> you automate it with technology. Human intervention should only happen where it contributes value.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-20">
+            <h2 class="text-4xl font-bold mb-8 uppercase flex items-center gap-4">
+                <span class="bg-black text-white w-12 h-12 flex items-center justify-center rounded-full text-2xl">4</span>
+                SVS & Service Value Chain
+            </h2>
+            
+            <div class="bg-white gumroad-card p-8 mb-8">
+                <h3 class="text-2xl font-bold mb-4 border-b-4 border-black inline-block pb-1">Service Value System (SVS)</h3>
+                <p class="mb-6">Describes how all the components and activities of the organization work together as a system to enable value creation. <b>Input:</b> Opportunity/Demand &rarr; <b>Output:</b> Value.</p>
+                <div class="flex flex-wrap gap-3 mb-6">
+                    <span class="badge bg-gray-200 px-3 py-1 font-bold rounded-full">Guiding Principles</span>
+                    <span class="badge bg-gray-200 px-3 py-1 font-bold rounded-full">Governance</span>
+                    <span class="badge bg-[#ffc900] px-3 py-1 font-bold rounded-full">Service Value Chain</span>
+                    <span class="badge bg-gray-200 px-3 py-1 font-bold rounded-full">Practices</span>
+                    <span class="badge bg-gray-200 px-3 py-1 font-bold rounded-full">Continual Improvement</span>
+                </div>
+            </div>
+
+            <div class="bg-[#b8f2e6] gumroad-card p-8">
+                <h3 class="text-2xl font-bold mb-6 border-b-4 border-black inline-block pb-1">Service Value Chain (SVC) Activities</h3>
+                <p class="mb-6 font-semibold">The central element of the SVS. An operating model which outlines the key activities required to respond to demand and facilitate value realization. (Remember: <b>PIEDOD</b>)</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="bg-white border-2 border-black p-4 rounded-lg">
+                        <h4 class="font-bold text-lg mb-1 flex items-center gap-2">📝 Plan</h4>
+                        <p class="text-sm">Ensure a shared understanding of the vision, current status, and improvement direction for all four dimensions.</p>
+                    </div>
+                    <div class="bg-white border-2 border-black p-4 rounded-lg">
+                        <h4 class="font-bold text-lg mb-1 flex items-center gap-2">📈 Improve</h4>
+                        <p class="text-sm">Ensure continual improvement of products, services, and practices across all value chain activities.</p>
+                    </div>
+                    <div class="bg-white border-2 border-black p-4 rounded-lg">
+                        <h4 class="font-bold text-lg mb-1 flex items-center gap-2">🤝 Engage</h4>
+                        <p class="text-sm">Provide a good understanding of stakeholder needs, transparency, and continual engagement (Interacting with users/customers).</p>
+                    </div>
+                    <div class="bg-white border-2 border-black p-4 rounded-lg">
+                        <h4 class="font-bold text-lg mb-1 flex items-center gap-2">📐 Design & Transition</h4>
+                        <p class="text-sm">Ensure that products and services continually meet stakeholder expectations for quality, costs, and time to market.</p>
+                    </div>
+                    <div class="bg-white border-2 border-black p-4 rounded-lg">
+                        <h4 class="font-bold text-lg mb-1 flex items-center gap-2">🛠️ Obtain / Build</h4>
+                        <p class="text-sm">Ensure that service components are available when and where they are needed, and meet agreed specifications.</p>
+                    </div>
+                    <div class="bg-white border-2 border-black p-4 rounded-lg">
+                        <h4 class="font-bold text-lg mb-1 flex items-center gap-2">🚚 Deliver & Support</h4>
+                        <p class="text-sm">Ensure that services are delivered and supported according to agreed specifications and stakeholders' expectations.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-10">
+            <h2 class="text-4xl font-bold mb-8 uppercase flex items-center gap-4">
+                <span class="bg-black text-white w-12 h-12 flex items-center justify-center rounded-full text-2xl">5</span>
+                The Top 7 Key Practices
+            </h2>
+            <p class="mb-6 font-bold text-red-600 bg-red-100 p-4 border-3 border-black rounded-lg shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                ⚠️ CRITICAL FOR THE EXAM: Memorize the exact purpose of these 7 practices.
+            </p>
+
+            <div class="space-y-6">
+                <div class="gumroad-card bg-white p-6 flex flex-col md:flex-row gap-6">
+                    <div class="md:w-1/3">
+                        <h3 class="text-2xl font-bold mb-2">Incident Management</h3>
+                        <span class="bg-[#ff90e8] font-bold px-2 py-1 border border-black rounded text-xs">Restore fast</span>
+                    </div>
+                    <div class="md:w-2/3">
+                        <p class="text-sm mb-2"><b>Purpose:</b> To minimize the negative impact of incidents by restoring normal service operation as quickly as possible.</p>
+                        <p class="text-sm bg-gray-100 p-2 rounded border border-black"><b>Incident definition:</b> An unplanned interruption to a service or reduction in the quality of a service.</p>
+                        <p class="text-sm mt-2"><i>Exam Tip: Swarming (multiple teams working together) is a good technique for complex incidents.</i></p>
+                    </div>
+                </div>
+
+                <div class="gumroad-card bg-white p-6 flex flex-col md:flex-row gap-6">
+                    <div class="md:w-1/3">
+                        <h3 class="text-2xl font-bold mb-2">Problem Management</h3>
+                        <span class="bg-[#90a8ed] font-bold px-2 py-1 border border-black rounded text-xs">Root causes</span>
+                    </div>
+                    <div class="md:w-2/3">
+                        <p class="text-sm mb-2"><b>Purpose:</b> To reduce the likelihood and impact of incidents by identifying actual and potential causes of incidents, and managing workarounds and known errors.</p>
+                        <ul class="text-sm list-disc pl-5 space-y-1 bg-gray-100 p-3 rounded border border-black">
+                            <li><b>Problem:</b> A cause, or potential cause, of one or more incidents.</li>
+                            <li><b>Known Error:</b> A problem that has been analyzed but not resolved.</li>
+                            <li><b>Workaround:</b> A solution that reduces or eliminates the impact of an incident/problem for which a full resolution is not yet available.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="gumroad-card bg-white p-6 flex flex-col md:flex-row gap-6">
+                    <div class="md:w-1/3">
+                        <h3 class="text-2xl font-bold mb-2">Change Enablement</h3>
+                        <span class="bg-[#ffc900] font-bold px-2 py-1 border border-black rounded text-xs">Maximize successful IT changes</span>
+                    </div>
+                    <div class="md:w-2/3">
+                        <p class="text-sm mb-2"><b>Purpose:</b> To maximize the number of successful service and product changes by ensuring that risks have been properly assessed, authorizing changes to proceed, and managing the change schedule.</p>
+                        <p class="text-sm bg-gray-100 p-2 rounded border border-black mb-2"><b>Change definition:</b> The addition, modification, or removal of anything that could have a direct or indirect effect on services.</p>
+                        <p class="text-sm"><b>Types of Changes:</b> Standard (pre-authorized, low risk), Normal (requires authorization based on change model), Emergency (must be implemented asap to resolve an incident).</p>
+                    </div>
+                </div>
+
+                <div class="gumroad-card bg-white p-6 flex flex-col md:flex-row gap-6">
+                    <div class="md:w-1/3">
+                        <h3 class="text-2xl font-bold mb-2">Service Desk</h3>
+                        <span class="bg-[#23a094] text-white font-bold px-2 py-1 border border-black rounded text-xs">SPOC (Single Point of Contact)</span>
+                    </div>
+                    <div class="md:w-2/3">
+                        <p class="text-sm mb-2"><b>Purpose:</b> To capture demand for incident resolution and service requests. It should also be the entry point and single point of contact for the service provider with all of its users.</p>
+                        <p class="text-sm"><i>Exam Tip: Empathy and communication skills are MORE important than technical skills for a Service Desk agent.</i></p>
+                    </div>
+                </div>
+
+                <div class="gumroad-card bg-white p-6 flex flex-col md:flex-row gap-6">
+                    <div class="md:w-1/3">
+                        <h3 class="text-2xl font-bold mb-2">Service Level Management</h3>
+                        <span class="bg-gray-300 font-bold px-2 py-1 border border-black rounded text-xs">SLAs & Business view</span>
+                    </div>
+                    <div class="md:w-2/3">
+                        <p class="text-sm mb-2"><b>Purpose:</b> To set clear business-based targets for service levels, and to ensure that delivery of services is properly assessed, monitored, and managed against these targets.</p>
+                        <p class="text-sm"><b>SLA (Service Level Agreement):</b> A documented agreement between a service provider and a customer that identifies both services required and the expected level of service. <i>Must be written in business language, not technical jargon (e.g., "Watermelon SLA" effect).</i></p>
+                    </div>
+                </div>
+
+                <div class="gumroad-card bg-white p-6 flex flex-col md:flex-row gap-6">
+                    <div class="md:w-1/3">
+                        <h3 class="text-2xl font-bold mb-2">Service Request Mgmt</h3>
+                        <span class="bg-blue-300 font-bold px-2 py-1 border border-black rounded text-xs">User requests</span>
+                    </div>
+                    <div class="md:w-2/3">
+                        <p class="text-sm mb-2"><b>Purpose:</b> To support the agreed quality of a service by handling all pre-defined, user-initiated service requests in an effective and user-friendly manner.</p>
+                        <p class="text-sm bg-gray-100 p-2 rounded border border-black"><b>Service Request definition:</b> A request from a user that initiates a service action which has been agreed as a normal part of service delivery (e.g., password reset, request for new software).</p>
+                    </div>
+                </div>
+
+                <div class="gumroad-card bg-[#111827] text-white p-6 flex flex-col md:flex-row gap-6">
+                    <div class="md:w-1/3">
+                        <h3 class="text-2xl font-bold mb-2 text-[#ff90e8]">Continual Improvement</h3>
+                        <span class="bg-white text-black font-bold px-2 py-1 border border-black rounded text-xs">Everyone's job</span>
+                    </div>
+                    <div class="md:w-2/3">
+                        <p class="text-sm mb-2 text-gray-300"><b>Purpose:</b> To align the organization's practices and services with changing business needs through the ongoing improvement of products, services, and practices, or any element involved in the management of products and services.</p>
+                        <p class="text-sm font-bold text-[#ffc900]">Important: Continual Improvement is the responsibility of EVERYONE in the organization, not just a dedicated team.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+</body>
+</html>
